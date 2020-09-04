@@ -20,7 +20,6 @@ const ContactForm = () => {
             name="firstName"
             placeholder="Edd"
             ref={register({ required: true, minLength: 3 })}
-            data-testid='first-name'
           />
           {errors.firstName && (
             <p>Looks like there was an error: {errors.firstName.type}</p>
@@ -61,7 +60,7 @@ const ContactForm = () => {
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
-        <input type="submit" data-testid='submit-btn'/>
+        <input id='submit' name='submit' type="submit"/>
       </form>
     </div>
   );
